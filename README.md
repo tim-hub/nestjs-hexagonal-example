@@ -1,48 +1,42 @@
-# NestJS Hexagonal Example (Port Adapter)
+# NestJS Hexagonal Architecture Example (Port Adapter)
 - [MIT License](LICENSE.md)
 
-![](https://miro.medium.com/max/1362/1*F9D76gA1FJNH504TcEWG_A.png)
+## What is Hexagonal Architecture? / Port adapter
 
-> The application code is split into two main components, the Application Core Domain and the Adapters.
-The Core Domain contains the implementation of the business logic or functional requirements, for example in our use case, a customer can only have 3 active tickets.
-The Adapters contain the implementation logic of the Non-functional requirements, like exposing a REST API to receive the customer ticket and storing it in the Postgres database.
+- [Hexagonal architecture](https://web.archive.org/web/20060711221010/http://alistair.cockburn.us:80/index.php/Hexagonal_architecture)
 
-> How does it work?
-The Core Domain exposes two types of ports, Input ports and output ports.
-Input ports are implemented methods that can be called from outside the Domain package, usually, these methods are called by Adapters.
-Output ports are interfaces that specify behaviours that Adapters must implement.
-Adapters implement the Output ports interfaces, then dependency injection is used to inject the desired Output port Adapter implementation at runtime.
 
-from [Rida kaddir](https://towardsdev.com/nest-js-clean-code-using-hexagonal-architecture-3442a37a6e8e)
+![](https://miro.medium.com/max/1400/1*LF3qzk0dgk9kfnplYYKv4Q.png)
+> from [Tugce Konuklar](https://medium.com/idealo-tech-blog/hexagonal-ports-adapters-architecture-e3617bcf00a0)
 
-## Installation
+### Explanation and Example of Port-Adapter
+
+- Port
+  - [Inbound Port/Driving Port](src/ticket/domain/inboudPorts/README.md)
+  - [Outbound Port/Driven Port](src/ticket/domain/outboundPorts/README.md)
+- Adapter
+  - [Primary/Driving/Inbound Adapter](src/ticket/adapters/driving/README.md)
+  - [Secondary/Driven/Outbound Adapter](src/ticket/adapters/driven/README.md)
+
+---
+
+## Installation and Running
 
 ```bash
 $ pnpm install
-```
-
-## Running the app
-
-```bash
-# development
-$ pnpm run start
-
-# watch mode
 $ pnpm run start:dev
-
-# production mode
-$ pnpm run start:prod
 ```
 
-## Test
+---
 
-```bash
-# unit tests
-$ pnpm run test
+# Todo
 
-# e2e tests
-$ pnpm run test:e2e
+- [ ] Consider implementing the unit test and e2e test
 
-# test coverage
-$ pnpm run test:cov
-```
+
+# References
+
+As you may know, this project was inspired by,
+- [Hexagonal (Ports & Adapters) Architecture](https://medium.com/idealo-tech-blog/hexagonal-ports-adapters-architecture-e3617bcf00a0)
+- [Nest JS -Clean code using Hexagonal Architecture](https://towardsdev.com/nest-js-clean-code-using-hexagonal-architecture-3442a37a6e8e) ticket system source code
+- About Hexagonal Architecture from [Tugce Konuklar](https://medium.com/idealo-tech-blog/hexagonal-ports-adapters-architecture-e3617bcf00a0)

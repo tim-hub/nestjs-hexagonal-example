@@ -1,9 +1,9 @@
 import { Body, Controller, Get, Logger, Post } from '@nestjs/common';
 import { TicketService } from '../../domain/inboudPorts/TicketService';
 
-import { TicketCommand } from './TicketCommand';
+import { TicketCommand } from '../model/TicketCommand';
 
-@Controller('tickets')
+@Controller('ticket')
 export class TicketController {
   private readonly logger = new Logger(TicketController.name);
 

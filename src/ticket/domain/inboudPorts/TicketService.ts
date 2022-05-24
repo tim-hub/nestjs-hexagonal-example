@@ -1,20 +1,20 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { Ticket } from '../model/Ticket';
-import { TicketRepository } from '../outboundPorts/TicketRepository';
+import { ITicketRepository } from '../outboundPorts/ITicketRepository';
+import { ITicketService } from './ITicketService';
 
 /**
- * Our domain input port
+ * The implementation of the inbound port ITicketService.
  */
 @Injectable()
-export class TicketService {
+export class TicketService implements ITicketService {
   constructor(
-    @Inject(TicketRepository)
-    private readonly tickerRepository: TicketRepository,
+    @Inject(ITicketRepository)
+    private readonly tickerRepository: ITicketRepository,
   ) {}
 
   create(description: string, priority: number): Ticket {
     const ticket = new Ticket(description, priority);
-    // TODO: check count of tickets less than 3
     if (this.findActiveTickets().length >= 3) {
       throw new Error('Ticket count is more than 3');
     }
