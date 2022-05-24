@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { Ticket } from '../model/Ticket';
-import { TicketRepository } from './TicketRepository';
+import { TicketRepository } from '../outboundPorts/TicketRepository';
 
 /**
  * Our domain input port

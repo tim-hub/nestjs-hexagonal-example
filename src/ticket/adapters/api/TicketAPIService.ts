@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Ticket } from '../../domain/model/Ticket';
-import { TicketService } from '../../domain/ports/TicketService';
+import { TicketService } from '../../domain/inboudPorts/TicketService';
 import { TicketCommand } from './TicketCommand';
 
 @Injectable()

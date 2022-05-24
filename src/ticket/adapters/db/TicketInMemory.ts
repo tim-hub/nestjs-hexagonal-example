@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { Ticket } from '../../domain/model/Ticket';
-import { TicketRepository } from '../../domain/ports/TicketRepository';
+import { TicketRepository } from '../../domain/outboundPorts/TicketRepository';
 
 /**
- * This is the output port, to store things in memory.
+ * This is the implementation of output port, to store things in memory.
  */
 @Injectable()
 export class TicketInMemory implements TicketRepository {

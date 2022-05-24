@@ -1,5 +1,5 @@
 import { Body, Controller, Get, Logger, Post } from '@nestjs/common';
-import { TicketService } from '../../domain/ports/TicketService';
+import { TicketService } from '../../domain/inboudPorts/TicketService';
 
 import { TicketCommand } from './TicketCommand';
 
