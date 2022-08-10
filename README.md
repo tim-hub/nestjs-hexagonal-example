@@ -6,9 +6,11 @@
 - [Hexagonal architecture](https://web.archive.org/web/20060711221010/http://alistair.cockburn.us:80/index.php/Hexagonal_architecture)
 
 
-![](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/im7unip69bgaqc8ebvz1.png)
+![](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/a1lup0ewj49dtu28q4d5.png)
 
 ### Explanation and Example of Port-Adapter
+
+![](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ks8hc96go37q6qtciiqu.png)
 
 - Port
   - [Inbound Port/Driving Port](src/ticket/domain/inboudPorts/)
