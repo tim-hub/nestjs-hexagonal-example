@@ -6,7 +6,7 @@
 - [Hexagonal architecture](https://web.archive.org/web/20060711221010/http://alistair.cockburn.us:80/index.php/Hexagonal_architecture)
 
 
-![](https://miro.medium.com/max/1400/1*LF3qzk0dgk9kfnplYYKv4Q.png)
+![](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/im7unip69bgaqc8ebvz1.png)
 > from [Tugce Konuklar](https://medium.com/idealo-tech-blog/hexagonal-ports-adapters-architecture-e3617bcf00a0)
 
 ### Explanation and Example of Port-Adapter
