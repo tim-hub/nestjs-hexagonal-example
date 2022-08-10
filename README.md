@@ -40,3 +40,4 @@ $ pnpm run start:dev
 As you may know, this project was inspired by,
 - [Nest JS -Clean code using Hexagonal Architecture](https://towardsdev.com/nest-js-clean-code-using-hexagonal-architecture-3442a37a6e8e) ticket system source code
 - About Hexagonal Architecture from [Tugce Konuklar](https://medium.com/idealo-tech-blog/hexagonal-ports-adapters-architecture-e3617bcf00a0)
+- Tech Tim 42's [Learn to build a Hexagonal Architecture Micro Service ](https://dev.to/timhub/learn-to-build-a-hexagonal-architecture-micro-service-l1h)
